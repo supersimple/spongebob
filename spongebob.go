@@ -7,6 +7,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/atotto/clipboard"
 	"github.com/gookit/color"
 )
 
@@ -31,5 +32,6 @@ func main() {
 	for _, l := range letters {
 		output = output + randomCase(l)
 	}
+	clipboard.WriteAll(output)
 	fmt.Println(output)
 }
